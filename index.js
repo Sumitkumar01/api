@@ -7,10 +7,14 @@ function reload() {
   window.location.reload();
 }
 async function fetchNews(q) {
-  const res = await fetch(`${url}${q}&apikey=${API_KEY}`);
-  const data = await res.json();
-  // console.log(data);
-  bindData(data.articles);
+  try {
+    const res = await fetch(`${url}${q}&apikey=${API_KEY}`);
+    const data = await res.json();
+    // console.log(data);
+    bindData(data.articles);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 function bindData(articles) {
