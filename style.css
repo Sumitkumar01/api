@@ -229,7 +229,7 @@ main {
   }
   .main-nav {
     justify-content: start;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   .company-logo img {
     width: 70px;
